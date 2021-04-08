@@ -16,4 +16,5 @@ int main() { // Main function body starting..
         printf("%c is a vowel.", c);
     else
         printf("%c is a consonant.", c);// else it will print "c" is a constant.
-    return 0; 
+    return 0;
+}

@@ -1,43 +1,19 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-int main()
-{
-    float area,radius,l,b,side,perimeter;
-    int choice;
-    printf("1. Circle\n");
-    printf("2. Rectangle\n");
-    printf("3. Square\n");
-    printf("Select your Choice\n");
-    scanf("%d",&choice);
-    switch(choice)
-    {
-    case 1:
-        printf("You have chosen Area and circumfrence of Circle\n");
-        printf("Enter the radius\n");
-        scanf("%f",&radius);
-        area=3.14*radius*radius;
-        perimeter=3.14*2*radius;
-        printf("Area of Circle is %.2f\nCircumfrence of Circle is %f\n",area, perimeter);
-        break;
-    case 2:
-        printf("You have chosen Area and perimeter of Rectangle\n");
-        printf("Enter length and breadth\n");//
-        scanf("%f%f",&l,&b);
-        area=(l*b);
-        perimeter=2*(l+b);
-        printf("Area of Rectangle= %.2f\nPerimeter of Rectangle= %f\n",area, perimeter);
-        break;
-    case 3:
-        printf("You have chosen Area and perimeter of Square\n");
-        printf("Enter value of side\n");
-        scanf("%f",&side);
-        area=side*side;
-        perimeter=4*side;
-        printf("Area of Square= %.2f\nPerimeter of Square= %f\n",area,perimeter);
-        break;
-    default:
-        printf("Sorry, Invalid Choice\n");
-    }
-    return 0;
-}
+#include <stdio.h> // Pre-Process directive to include Standard input output functions header file
+int main() { // Main function body starting..
+    char c; // c variable declaration of char data type.
+    int lowercase_vowel, uppercase_vowel; //lowercase_vowel and uppercase_vowel variable declaration of int data type
+
+    printf("Enter an alphabet: ");
+    scanf("%c", &c); //Taking character as a input from the user
+
+    // Assigning lowercase vowels to c
+    lowercase_vowel = (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u');
+
+    // Assigning uppercase vowels to c
+    uppercase_vowel = (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U');
+
+    if (lowercase_vowel || uppercase_vowel)// evaluates to 1 (true) if c is a vowel
+        printf("%c is a vowel.", c);
+    else
+        printf("%c is a consonant.", c);// else it will print "c" is a constant.
+    return 0; 
